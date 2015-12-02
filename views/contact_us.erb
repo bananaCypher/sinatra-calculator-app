@@ -1,7 +1,7 @@
 <h1>Contact Us</h1>
 <hr/>
 <p>We would love to hear from you, let us know what you think below.</p>
-<form>
+<form action='/thank_you' method='get'>
   <div>
     <label>Name</label><input type='text' name='name'/>
    <label>E-mail</label><input type='text' name='email'/>
@@ -11,14 +11,3 @@
   </div>
   <button>Submit</button>
 </form>
-
-<% if @name && !@name.empty? %> 
-  <div class='acknowledge'>
-    <p>
-      Thanks for the feedback, we have recieved it as below:-<br/>
-      <b>Name:</b> <%= @name %><br/>
-      <b>E-mail:</b> <%= @email %><br/>
-      <b>Message:</b> <%= @message %>
-    </p>
-  </div>
-<% end %>

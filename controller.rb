@@ -31,8 +31,12 @@ get '/about_us' do
 end
 
 get '/contact_us' do
+  erb :contact_us
+end
+
+get '/thank_you' do
   @name = params[:name]
   @email = params[:email]
   @message = params[:message]
-  erb :contact_us
+  erb :thank_you
 end
